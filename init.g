@@ -1,15 +1,24 @@
 #############################################################################
 ##
-##  init.g                  FpGd library                  Nisreen Alokbi 
+#W    init.g                 The FpGd package                Nisreen Alokbi
+#W                                                      
 ##
-############################################################################
+#############################################################################
 
-if not IsBound(HapGlobalDeclarationsAreAlreadyLoaded) then
-ReadPackage("FpGd","lib/fpgd.gd");
-HapGlobalDeclarationsAreAlreadyLoaded:=true;
-MakeReadOnlyGlobal("FpgdGlobalDeclarationsAreAlreadyLoaded");
-fi;
 
-ReadPackage("FpGd","/lib/externalSoftware.gap");
+#############################################################################
+##
+#R  Read the declaration files.
+##
 
+
+ReadPackage( "FpGd", "lib/FreeGroupoid.gd" );
+ReadPackage( "FpGd", "lib/FpGroupoid.gd" );
+ReadPackage( "FpGd", "lib/GroupoidHomomorphism.gd" );
+
+ReadPackage( "FpGd", "lib/fpgd.gd");
+
+
+
+#E  init.g . . . . . . . . . . . . . . . . . . . . . . . . . . . .  ends here
 
